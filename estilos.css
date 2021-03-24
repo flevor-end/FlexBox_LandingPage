@@ -1,0 +1,237 @@
+body {
+  background-color: white;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1.6em;
+  margin: 0;
+}
+
+.contenedor {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background-color: #20293f;
+  color: #ffffff;
+}
+
+h1 {
+  color: #8ac2ff;
+}
+
+p.thin {
+  font-size: 20px;
+  font-weight: 300;
+  color: #20293f;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+main p {
+  color: #727272;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10em;
+  background: #8ac2ff;
+  border: none;
+  color: #20293f;
+  font-weight: 700;
+}
+
+.ContFase {
+  display: flex;
+  margin: 0 auto;
+  padding: 0.2em;
+  border: solid 1px #20293f;
+  border-radius: 50%;
+}
+
+.fase {
+  background: #8ac2ff;
+  padding: 1.2em;
+  border-radius: 50%;
+  width: 1.4em;
+ 
+}
+
+nav {
+  background-color: #2f2fa4;
+  color: #fff;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: #99738e;
+  text-decoration: none;
+  font-size: 20px;
+  padding-right: 15px;
+}
+nav a:hover {
+  text-decoration: none;
+  color: #f64c72;
+}
+
+#presentacion {
+  background-image: url("Recursos página/fondo_hero.png");
+  min-height: 300px;
+  margin-bottom: 30px;
+  background-size: 420px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  min-height: 100vh;
+}
+
+#presentacion h2 {
+  color: #f3f3f3;
+  font-size: 50px;
+  line-height: 1.6em;
+  padding-top: 30px;
+}
+
+main {
+  float: left;
+  width: 50%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+aside {
+  background-image: url("./Recursos página/Recursos página/Composición mujer/Recurso\ 11.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  float: right;
+  width: 45%;
+  color: #fff;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.portafolio {
+  border: 1px solid rebeccapurple;
+  padding: 0 0 50px 0;
+}
+
+.portafolio h4 {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.item1 img {
+  width: 9em;
+}
+
+footer {
+  color: #ccc;
+  text-align: center;
+}
+
+.cajas-footer img {
+  width: 223px;
+}
+
+.copy {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 5px;
+  display: block;
+}
+
+.cont-parallax {
+  line-height: 180%;
+  color: #444;
+  text-align: center;
+}
+
+.foto1 {
+  background-image: url(./img/presentacion.png);
+  height: 345px;
+  min-height: 100%;
+  position: relative;
+  opacity: 0.75;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.letrero3 {
+  color: #d1345b;
+  font-size: 75%;
+  top: 62%;
+}
+
+.letrero2 {
+  color: #c73256;
+  font-size: 90%;
+  top: 57%;
+}
+
+.letrero {
+  color: #fbfbfb;
+  font-size: 150%;
+  position: absolute;
+  top: 50%;
+}
+
+.letrero,
+.letrero2,
+.letrero3 {
+  position: absolute;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-shadow: 0 0 10px #000;
+}
+
+section {
+  padding: 50px 80px;
+  color: #20293f;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    display: block;
+  }
+  main,
+  aside {
+    width: 100%;
+    float: none;
+  }
+  .letrero {
+    font-size: 100%;
+  }
+  .letrero2 {
+    font-size: 60%;
+  }
+  .letrero3 {
+    font-size: 45%;
+  }
+}
+
+@media (min-width: 768px) {
+  .portafolio {
+    display: flex;
+    justify-content: space-around;
+  }
+  .cajas-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
