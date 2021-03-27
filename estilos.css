@@ -46,7 +46,7 @@ main p {
   font-size: 14px;
 }
 
-button {
+.btn {
   padding: 10px 20px;
   border-radius: 10em;
   background: #8ac2ff;
@@ -54,6 +54,15 @@ button {
   color: #20293f;
   font-weight: 700;
   box-shadow: 0 5px 9px 0 rgb(0 0 0 / 30%);
+}
+
+button.bullet {
+  position: relative;
+  top: -36px;
+  height: 10px;
+  width: 46px;
+  border: solid 2px #8ac2ff;
+  border-radius: 5px;
 }
 
 .fase {
@@ -68,7 +77,6 @@ button {
 }
 
 nav {
-  background-color: #2f2fa4;
   color: #fff;
 }
 
@@ -105,6 +113,12 @@ nav a:hover {
   background: url("Recursos página/Recursos página/Recurso 15@2x.png") left -185px
     top 34px no-repeat;
   background-size: 36%;
+}
+
+#presentacion3 {
+  background: url("Recursos página/Recursos página/Recurso 14@2x.png") right -185px
+    top 3px no-repeat;
+  background-size: 36%;
   padding-bottom: 12em;
 }
 
@@ -131,7 +145,7 @@ aside {
 .img_hero {
   background: url("./Recursos página/Recursos página/Composición mujer/Recurso\ 11.png")
     left 0px top 67px no-repeat;
-  background-size: 348px;
+  background-size: 75%;
 }
 
 .img_hero img {
@@ -182,15 +196,16 @@ footer {
 }
 
 .foto1 {
-  background-image: url(./img/presentacion.png);
-  height: 345px;
-  min-height: 100%;
-  position: relative;
+  background: url("./Recursos página/Recursos página/Composición mujer/Recurso\ 4.png")
+    right 210px top 90px no-repeat;
+  background-size: auto;
+}
+
+.foto2 {
+  background: url("./Recursos página/Recursos página/Recurso\ 14.png") right -10px
+    top 90px no-repeat;
+  background-size: auto;
   opacity: 0.75;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .letrero3 {
@@ -237,31 +252,30 @@ section h2 {
 } */
 .titleItem {
   display: flex;
-  width: calc(30% - 23px);
   justify-content: flex-end;
+  text-align: end;
 }
 
 .titleItemleft {
   justify-content: flex-start;
-  width: calc(30% - 9px);
   display: flex;
 }
 
-.numItem {
+.numItem,
+.numItemOff {
   display: flex;
-  width: 15%;
   justify-content: center;
+  margin: 3em 0;
 }
 
-.ContFase > span.fase:after {
+.item1.numItem:after {
   content: "";
+  width: 3px;
+  height: 33%;
   position: absolute;
-  width: 1px;
-  height: 100%;
   background: #8ac2ff;
-  bottom: -69em;
-  left: 41.9rem;
-  transition: 0.4s;
+  margin: 10px 0;
+  z-index: -1;
 }
 
 .ContFase {
@@ -273,9 +287,9 @@ section h2 {
 }
 
 .contentItem,
-.contentItemDart {
+.contentItemDart,
+.contentItemleft {
   display: flex;
-  width: calc(27% - 24px);
   text-align: left;
   font-size: 12px;
   padding: 20px;
@@ -285,17 +299,8 @@ section h2 {
   box-shadow: 0 5px 9px 0 rgb(0 0 0 / 30%);
 }
 
-.contentItemleft,
-.contentItemleftDart {
-  display: flex;
-  width: calc(27% - 24px);
-  text-align: left;
-  font-size: 12px;
-  padding: 20px;
+.contentItemleft {
   background: #ffffff;
-  line-height: 1.2em;
-  border-radius: 20px;
-  box-shadow: 0 5px 9px 0 rgb(0 0 0 / 30%);
 }
 
 .contentItemDart,
@@ -305,12 +310,10 @@ section h2 {
 }
 
 .ContainerSection3 {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
   align-items: center;
   padding: 0;
-  margin: 15px 0;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
 }
 
 @media (max-width: 768px) {
@@ -331,34 +334,36 @@ section h2 {
   .letrero3 {
     font-size: 45%;
   }
+
   .ContainerSection3 {
-    display: block;
+    grid-column-gap: 1em;
+    display: grid;
+    grid-template-columns: none;
   }
   .titleItem,
   .titleItemleft {
     width: 100%;
     justify-content: center;
     display: flex;
+    order: 2;
+    text-align: center;
   }
   .numItem {
     width: 100%;
+    order: 1;
   }
   .contentItem,
   .contentItemleft,
-  .contentItemleftDart,
   .contentItemleft,
   .contentItemDart {
-    width: 100%;
+    display: flex;
+    width: auto;
+    margin: 0 10px;
+    order: 3;
   }
-  .ContFase > span.fase:after {
-    content: "";
-    position: relative;
-    width: 1px;
-    height: 100%;
-    background: #8ac2ff;
-    bottom: 0;
-    left: 0;
-    transition: 0.4s;
+
+  .item1.numItem:after {
+    content: none;
   }
 }
 
